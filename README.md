@@ -1,7 +1,8 @@
 ﻿# Catalogue of Formal Verification Tools
 
-This is a catalogue of the various existing formal methods (formal verification) tools, with an eye towards apply them to software verification in an industrial setting.
-We use the catalogue at DFINITY to inform ourselves about tools and evaluate them for our needs.
+This is a catalogue of various existing formal methods (formal verification) tools, with an eye towards applying them to software verification in an industrial setting.
+We aim to use this catalogue at DFINITY to inform ourselves about tools and evaluate them for our needs.
+We invite others to also use this list for reference and ask experts of different tools to help us improve it.
 If a tool you know is not in the list, or has insufficient/wrong information, please send a PR!
 
 We list the following information for every tool:
@@ -14,7 +15,7 @@ We list the following information for every tool:
 
 * **Domain**: some tools are geared towards specific domains, e.g., security protocols.
 
-* **Model analysis & automation**: ultimately, the goal of the tool is to analyze a model of the system.
+* **Model automation & analysis**: ultimately, the goal of the tool is to analyze a model of the system.
   The analysis can be fully automated, or can require a lot of manual input, or lie somewhere in between. 
   Furthermore, there’s a number of standard analysis approaches: interactive tactic-based reasoning, SAT/SMT solving (often with some preprocessing), exhaustive finite state model checking, symbolic model checking, etc. 
   If the tool uses such an approach, we note it here.
@@ -28,7 +29,7 @@ We list the following information for every tool:
 
 * **URL**: where to find more information
 
-Other resources that compare different tools:
+Also, we collect here other resources that compare different tools:
 
 * [SOK: Computer-Aided Cryptography (2019)][1]
 * [Seventeen Provers of the World (2006)][2]
@@ -114,7 +115,7 @@ Other resources that compare different tools:
 
 * **Modeling language**: dependently-typed lambda calculus (refinement types)
   with monadic effects
-* **Domain**: general, geared towards verified funcitonal programs
+* **Domain**: general, geared towards verified functional programs
 * **Analysis mechanisms & automation**: a combination of manual and SMT-based
   proofs; does the user get feedback on proof progress/failed proofs?
 * **Success stories**: 
@@ -148,7 +149,7 @@ Other resources that compare different tools:
     effort estimated at 30 person-years)
   * CoCon, a secure (against an information flow policy with declassification)
     scientific conference management system used for ITP 2016, code generated
-    from a verified developmen
+    from a verified development
 * **UX (UI, documentation, community, tooling)**:
   * IDEs for jEdit and VSCode (less functional than jEdit), with code completion/navigation on-par with most mainstream programming languages
   * Tutorials and books freely available
@@ -204,7 +205,6 @@ Other resources that compare different tools:
 * **More details**:
 * **URL**: https://prosecco.gforge.inria.fr/personal/bblanche/proverif/
 
-* 
 ## PVS
 
 * **Modeling language**: 
