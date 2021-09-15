@@ -273,15 +273,31 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://pvs.csl.sri.com/
-* **Modeling language**:
-* **Domain**:
-* **Abstraction level of models**:
-* **Analysis mechanisms & automation**: 
-* **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
-* **Related tools and comparison**:
+* **Modeling language**: dependently-typed lambda calculus
+* **Domain**: program analysis
+* **Abstraction level of models**: any
+* **Analysis mechanisms & automation**: Interactive with automation. Has a plugin system and built in tools for automating proofs.
+* **Success stories**: byzantine fault tolerance, used by NASA in flight control systems
+* **UX (UI, documentation, community, tooling)**: Emacs mode, VS Code integration for more user-friendly interaction
+* **Related tools and comparison**: Coq, Isabelle, Lean
 * **Limitations**:
+  - It seems to require processes to terminate in order to model them.
+  - Types need to be well-founded.
+  - The type system language is distinct and more limited than the object language. This is due to its focus on program analysis,
+    rather than mathematics.
 
+## ACL2
+
+* **Short description**: Interactive theorem prover
+* **URL**: https://www.cs.utexas.edu/users/moore/acl2/
+* **Modeling language**: Applicative subset of common lisp. Dynamically typed.
+* **Domain**: program analysis
+* **Abstraction level of models**: any
+* **Analysis mechanisms & automation**: https://www.cs.utexas.edu/users/moore/acl2/
+* **Success stories**: AMD microcode, used in microprocessor industry
+* **UX (UI, documentation, community, tooling)**: Emacs mode
+* **Related tools and comparison**: PVS
+* **Limitations**:
 
 ## Tamarin
 
