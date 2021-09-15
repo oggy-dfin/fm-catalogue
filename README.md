@@ -137,8 +137,11 @@ Also, we collect here other resources that compare different tools:
 
 ## Isabelle/HOL
 
+* **URL**: https://isabelle.in.tum.de/
+* **Short description**: Interactive theorem prover
 * **Modeling language**: HOL (higher-order logic) with typeclasses
 * **Domain**: general
+* **Abstraction level of models**: any
 * **Analysis mechanisms & automation**: 
   * interactive (with tactics)
   * Sledgehammer tool for automated proof generation using different backend
@@ -156,10 +159,12 @@ Also, we collect here other resources that compare different tools:
   * CLI tools for building theories, supporting caching and parallel proof checking
   * A large collection of existing developments: https://www.isa-afp.org/ 
   * An active mailing list, Stackoverflow
+* **Related tools and comparison**:
+  * Coq: ... 
+* **Limitations**:
 * **More details**: supports code generation into OCaml, Haskell SML, and Scala.
   The structured proof language Isar makes maintenance of proofs easier compared
   to proofs based on just a sequence of tactic applications.
-* **URL**: https://isabelle.in.tum.de/
 
 ## K-framework
 
@@ -217,10 +222,13 @@ Also, we collect here other resources that compare different tools:
 
 ## Tamarin
 
+* **URL**: http://tamarin-prover.github.io/
+* **Short description**: Security protocol verifier
 * **Modeling language**: Rewrite rules to model the protocol, equational
-  theories for specifying properties of primitives, trace-based execution and
+  theories for specifying cryptographic primitives, trace-based execution and
   FOL to express properties
 * **Domain**: security protocols in the symbolic (Dolev-Yao) model
+* **Abstraction level of models**: Protocol logic
 * **Analysis mechanisms & automation**: 
    * a built-in Dolev-Yao adversary model
    * automated proof search with 
@@ -229,8 +237,12 @@ Also, we collect here other resources that compare different tools:
 * **UX (UI, documentation, community, tooling)**:
   * a Web-based interface for proof search/construction
   * a manual is available
-* **More details**:
-* **URL**: http://tamarin-prover.github.io/
+* **Related tools and comparison**:
+  * ProVerif: ... 
+  * Scyther: Tamarin is more expressive. 
+* **Limitations**: No support for arithmetic 
+* **More details**: Support for observational-equivalence properties (e.g., privacy).
+
 
 ## TLA+
 
