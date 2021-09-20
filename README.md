@@ -43,7 +43,7 @@ Also, we collect here other resources that compare different tools:
 
 * [SOK: Computer-Aided Cryptography (2019)][1]
 * [Seventeen Provers of the World (2006)][2]
-
+* [QED at Large: A Survey of Engineering of Formally Verified Software (2020)][9]
 
 ## Agda
 
@@ -365,7 +365,7 @@ Also, we collect here other resources that compare different tools:
 [6]: <https://link.springer.com/article/10.1007/s10817-020-09566-9> "CoCon: A Conference Management System with Formally Verified Document Confidentiality"
 [7]: <https://arxiv.org/abs/1808.09701> "Comparison of Two Theorem Provers: Isabelle/HOL and Coq"
 [8]: <https://arxiv.org/abs/1603.03599> "Alloy meets TLA+: An exploratory study"
-
+[9]: <https://arxiv.org/pdf/2003.06458.pdf> "QED at Large: A Survey of Engineering of Formally Verified Software"
 
 ## Template
 
