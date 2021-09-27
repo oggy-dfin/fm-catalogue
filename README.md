@@ -22,6 +22,7 @@ We aim to collect the following information for every tool:
 * **Abstraction level of models**: Some tools specialize in high-level
   descriptions of systems (protocols, designs and algorithms). Others specialize
   in verifying code, while yet others can handle arbitrary models.
+* **Supported languages**: If the tool supports code verification and/or generation, what languages does it support? Is the support complete (i.e., covers all features)?
 * **Analysis mechanisms & automation**: Ultimately, the goal of the tool is to
   analyze a model of the system. The analysis can be fully automated, or can
   require a lot of manual input, or lie somewhere in between. Furthermore,
@@ -29,13 +30,19 @@ We aim to collect the following information for every tool:
   reasoning, SAT/SMT solving (often with some preprocessing), exhaustive finite
   state model checking, symbolic model checking, etc. If the tool uses such an
   approach, we note it here.
-* **Success stories**: Notable verification efforts successfully completed using the tool.
+* **Success stories**: Notable verification efforts successfully completed using the tool, ideally with links to them.
   While subjective, we want to focus on verification of software and algorithms that have had real-world usage.
-* **UX (UI, documentation, community, tooling)**: All things that influence the ergonomics of working with the tool.
+* **UX (UI, tooling, libraries)**: All things that influence the ergonomics of working with the tool.
+* **Maturity**: How backwards-compatible it is? Good changelogs?
+* **Documentation and learning resources**: Where do I find documentation? Are there books, tutorials, courses etc. available? 
+* **Support**: What are the main channels to get support? Mailing lists? Chat? Stackoverflow? How active are these? Does the tool receive regular bugfixes/improvements?
+* **Community**: How many projects are using it (e.g., on Github)? Where does one find them? Are there active projects using it? Are there conferences devoted to the tool, or where work done in the tool regularly features?
+* **Scalability**: How good is the tool at using additional hardware (cores, multiple machines)?
 * **Related tools and comparison**: Which tools are similar to this one? How do they compare? While comparisons 
   are always somewhat subjective, they are very helpful and we encourage you to post them if you are familiar
   with multiple similar tools. Links to comparison papers/blog posts/other resources are also welcome!
 * **Limitations**: Does the tool have notable limitations relevant to its domain?
+* **Future prospects**: Are there any notable features on the way?
 * **More details**: Anything relevant that's not covered by the above.
 
 
