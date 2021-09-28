@@ -2,13 +2,15 @@
 
 This is a catalogue of various existing formal methods (formal verification) tools, with an eye towards applying them to software verification in an industrial setting.
 We aim to use this catalogue at DFINITY to inform ourselves about tools and evaluate them for our needs.
-We invite others to also use this list for reference and ask experts of different tools to help us improve it.
+We invite others to also use this list for reference and ask experts in the different tools to help us improve it.
 If a tool you know is not in the list, or has insufficient/wrong information, please send a PR!
 
-We aim to collect the following information for every tool:
+As we are driven by industrial applications, we are interested not only in the scientific, but also the engineering and community aspects of a tool. 
+We thus aim to collect the following information for every tool:
 
 * **Short description**: How would you describe the tool in one sentence?
 * **URL**: The official (or as official as possible) tool URL
+* **License**:
 * **Modeling language**: Verifying a system requires modeling both the system
   and its specification in the tool. Different tools provide different languages
   for specifying systems and specifications (often the same language is used for
@@ -22,7 +24,7 @@ We aim to collect the following information for every tool:
 * **Abstraction level of models**: Some tools specialize in high-level
   descriptions of systems (protocols, designs and algorithms). Others specialize
   in verifying code, while yet others can handle arbitrary models.
-* **Supported languages**: If the tool supports code verification and/or generation, what languages does it support? Is the support complete (i.e., covers all features)?
+* **Supported languages**: If the tool supports code verification and/or generation, what languages does it support? How complete is the support (i.e., does it cover all the features)?
 * **Analysis mechanisms & automation**: Ultimately, the goal of the tool is to
   analyze a model of the system. The analysis can be fully automated, or can
   require a lot of manual input, or lie somewhere in between. Furthermore,
@@ -30,14 +32,15 @@ We aim to collect the following information for every tool:
   reasoning, SAT/SMT solving (often with some preprocessing), exhaustive finite
   state model checking, symbolic model checking, etc. If the tool uses such an
   approach, we note it here.
+* **UX (UI, tooling, libraries)**: All things that influence the ergonomics of working with the tool, both in direct interaction and in processes such as CI.
+* **Scalability**: How good is the tool at using additional available hardware (more cores, multiple machines)?
+* **Stability**: How backwards-compatible it is? Good changelogs?
+* **Documentation and learning resources**: Where do I find documentation? Are there books, tutorials, courses etc. available?
+* **Support**: What are the main channels to get support? Mailing lists? Chat? Stackoverflow? How active are these? Does the tool receive regular bugfixes/improvements?
 * **Success stories**: Notable verification efforts successfully completed using the tool, ideally with links to them.
   While subjective, we want to focus on verification of software and algorithms that have had real-world usage.
-* **UX (UI, tooling, libraries)**: All things that influence the ergonomics of working with the tool.
-* **Maturity**: How backwards-compatible it is? Good changelogs?
-* **Documentation and learning resources**: Where do I find documentation? Are there books, tutorials, courses etc. available? 
-* **Support**: What are the main channels to get support? Mailing lists? Chat? Stackoverflow? How active are these? Does the tool receive regular bugfixes/improvements?
+  What was verified: code, high-level models? Is there any information on how large the code/model was? How long did the modeling and verification take?
 * **Community**: How many projects are using it (e.g., on Github)? Where does one find them? Are there active projects using it? Are there conferences devoted to the tool, or where work done in the tool regularly features?
-* **Scalability**: How good is the tool at using additional hardware (cores, multiple machines)?
 * **Related tools and comparison**: Which tools are similar to this one? How do they compare? While comparisons 
   are always somewhat subjective, they are very helpful and we encourage you to post them if you are familiar
   with multiple similar tools. Links to comparison papers/blog posts/other resources are also welcome!
@@ -45,12 +48,12 @@ We aim to collect the following information for every tool:
 * **Future prospects**: Are there any notable features on the way?
 * **More details**: Anything relevant that's not covered by the above.
 
-
 Also, we collect here other resources that compare different tools:
 
 * [SOK: Computer-Aided Cryptography (2019)][1]
 * [Seventeen Provers of the World (2006)][2]
 * [QED at Large: A Survey of Engineering of Formally Verified Software (2020)][9]
+* [A Survey on Theorem Provers in Formal Methods (2019)][10]
 
 ## Agda
 
@@ -389,18 +392,26 @@ Also, we collect here other resources that compare different tools:
 [7]: <https://arxiv.org/abs/1808.09701> "Comparison of Two Theorem Provers: Isabelle/HOL and Coq"
 [8]: <https://arxiv.org/abs/1603.03599> "Alloy meets TLA+: An exploratory study"
 [9]: <https://arxiv.org/pdf/2003.06458.pdf> "QED at Large: A Survey of Engineering of Formally Verified Software"
+[10]: <https://arxiv.org/pdf/1912.03028v1.pdf> "A Survey on Theorem Provers in Formal Methods"
 
 ## Template
 
 * **Short description**:
 * **URL**:
+* **License**:
 * **Modeling language**:
 * **Domain**:
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**: 
-* **Success stories**:
 * **UX (UI, documentation, community, tooling)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
+* **Success stories**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
-
