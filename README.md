@@ -34,7 +34,7 @@ We thus aim to collect the following information for every tool:
   approach, we note it here.
 * **UX (UI, tooling, libraries)**: All things that influence the ergonomics of working with the tool, both in direct interaction and in processes such as CI.
 * **Scalability**: How good is the tool at using additional available hardware (more cores, multiple machines)?
-* **Stability**: How backwards-compatible it is? Good changelogs?
+* **Stability**: How backwards-compatible is the tool? E.g., are existing proofs likely to break with a new version? Does it have good changelogs?
 * **Documentation and learning resources**: Where do I find documentation? Are there books, tutorials, courses etc. available?
 * **Support**: What are the main channels to get support? Mailing lists? Chat? Stackoverflow? How active are these? Does the tool receive regular bugfixes/improvements?
 * **Success stories**: Notable verification efforts successfully completed using the tool, ideally with links to them.
@@ -55,38 +55,74 @@ Also, we collect here other resources that compare different tools:
 * [QED at Large: A Survey of Engineering of Formally Verified Software (2020)][9]
 * [A Survey on Theorem Provers in Formal Methods (2019)][10]
 
+## ACL2
+
+* **Short description**: Interactive theorem prover
+* **URL**: https://www.cs.utexas.edu/users/moore/acl2/
+* **License**:
+* **Modeling language**: Applicative subset of common lisp. Dynamically typed.
+* **Domain**: program analysis
+* **Abstraction level of models**: any
+* **Supported languages**:
+* **Analysis mechanisms & automation**: https://www.cs.utexas.edu/users/moore/acl2/
+* **UX (UI, tooling, libraries)**: Emacs mode
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
+* **Success stories**: AMD microcode, used in microprocessor industry
+* **Community**:
+* **Related tools and comparison**: PVS
+* **Limitations**:
+* **Future prospects**:
+* **More details**:
+
 ## Agda
 
 * **Short description**: Dependently typed programming language
 * **URL**: https://wiki.portal.chalmers.se/agda/pmwiki.php
+* **License**:
 * **Modeling language**: dependently-typed lambda calculus 
 * **Domain**: general, geared towards verified functional programs.
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**: 
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## Alloy
 
 * **Short description**: Automated analyzer of high-level models
 * **URL**: https://alloytools.org/
+* **License**: MIT
 * **Modeling language**: First-order relational logic (no function symbols) with a transitive closure operator.
 * **Domain**: general
 * **Abstraction level of models**: "lightweight analysis" (high-level system/algorithm descriptions)
+* **Supported languages**: N/A
 * **Analysis mechanisms & automation**: Fully automated, SAT-based model finder (KodKod) for models of user-defined sizes.
+* **UX (UI, tooling, libraries)**:
+  * Multi-platform Java-based IDE for specifying and analyzing models
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**: online tutorials and references, as well as a book
+* **Support**: StackOverflow community (~500 questions as of Sep 2021)
 * **Success stories**:
     * [Found problems in Chord][3] (an influential distributed hash table algorithm)
-* **UX (UI, documentation, community, tooling)**:
-  * Multi-platform Java-based IDE for specifying and analyzing models
-  * Docs: online tutorials and references, as well as a book
-  * StackOverflow community (~500 questions as of Sep 2021)
+* **Community**:
 * **Related tools and comparison**:
   * B, OCL, VDM and Z ([comparison][4])
   * TLA+ ([comparison][8] from 2016)
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 
@@ -94,128 +130,186 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://coq.inria.fr/
+* **License**:
 * **Modeling language**: dependently-typed lambda calculus
 * **Domain**: general
 * **Abstraction level of models**: any
+* **Supported languages**:
 * **Analysis mechanisms & automation**: 
     * interactive theorem proving with user-definable tactics (Ltac language to define tactics)
     * QuickCheck for finding counterexamples
+* **UX (UI, tooling, libraries)**:
+    * Built-in IDE, and also integrations for VSCode, Emacs, and Vim
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+    * Several free books & courses available 
+* **Support**:
 * **Success stories**: 
   * CompCert, a formally verified optimizing C compiler (~100k lines of Coq code)
   * CertiKOS, a concurrent microkernel/hypervisor (~6500 lines of C and x86
     assembly)
   * FSCQ, a simple FUSE file system verified to be safe in the presence of crashes (~30k lines of Coq, extracted Haskell code)
-* **UX (UI, documentation, community, tooling)**: 
-    * Built-in IDE, and also integrations for VSCode, Emacs, and Vim
-    * Several free books & courses available 
+* **Community**:
 * **Related tools and comparison**: Isabelle, Agda, Idris
 * **Limitations**:
+* **Future prospects**:
 * **More details**: supports code extraction to OCaml, Haskell and Scheme. Likely the best-known theorem prover.
 
 ## CryptoVerif
 
 * **Short description**: Cryptographic protocol analyzer
 * **URL**: https://prosecco.gforge.inria.fr/personal/bblanche/cryptoverif/
+* **License**:
 * **Modeling language**:
 * **Domain**: crypto protocols in a computational model
 * **Abstraction level of models**:
+* **Supported languages**: N/A
 * **Analysis mechanisms & automation**: automated?
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**: has been used to analyze protocol models of TLS 1.3,
   Signal, WireGuard
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**: has a notion of private channels.
 
 ## CT-Wasm
 
 * **Short description**: Code analyzer
 * **URL**: https://github.com/PLSysSec/ct-wasm
+* **License**:
 * **Modeling language**:
 * **Domain**: enforcing constant-time behavior of Wasm programs
 * **Abstraction level of models**:
+* **Supported languages**: Wasm
 * **Analysis mechanisms & automation**: 
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**: available in the [crypto SoK][1]
 
 ## EasyCrypt
 
 * **Short description**: Cryptographic protocol analyzer
 * **URL**: https://www.easycrypt.info/
+* **License**:
 * **Modeling language**: cryptographic games
 * **Domain**: crypto protocols in a computational model
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**:  automated?
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**: close to pen-and-paper crypto proofs
 
 ## F*
 
 * **Short description**: Dependently typed functional programming language
 * **URL**: https://www.fstar-lang.org/
+* **License**: Apache 2.0
 * **Modeling language**: dependently-typed lambda calculus (refinement types)
   with monadic effects
 * **Domain**: general, geared towards verified functional programs
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**: a combination of manual and SMT-based
   proofs; does the user get feedback on proof progress/failed proofs?
+* **Scalability**:
+* **Stability**:
+* **UX (UI, tooling, libraries)**:
 * **Success stories**: 
   * miTLS, a verified implementation of TLS 1.3
   * LibSignal*, a verified implementation of the Signal protocol that compiles down to WebAssembly
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**: Supports program extraction to F#, OCaml, C, WASM and assembly.
   
 ## Idris
 
 * **Short description**: Dependently typed functional programming language
 * **URL**: https://www.idris-lang.org/
+* **License**:
 * **Modeling language**: dependently-typed lambda calculus
 * **Domain**: general, geared towards verified functional programs
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**: interactive (with tactics)
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## Isabelle/HOL
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://isabelle.in.tum.de/
+* **License**: BSD
 * **Modeling language**: HOL (higher-order logic) with typeclasses
 * **Domain**: general
 * **Abstraction level of models**: any
+* **Supported languages**: 
+  * Built-in code generation to Haskell, OCaml, Scala, and SML (SML has a [verified compilation path to CakeML](https://lars.hupel.info/pub/isabelle-cakeml.pdf)). 
+  * [Autocorres](https://github.com/seL4/l4v/blob/master/tools/autocorres/README.md) library for parsing C code into Isabelle
+  * Semantics of [x86_64](https://www.ssrg.ece.vt.edu/papers/cpp2019.pdf), [Wasm](https://www.isa-afp.org/entries/WebAssembly.html), [ARMv8, RISC-V and CHERI_MIPS](https://www.cl.cam.ac.uk/~pes20/sail/sail-popl2019.pdf)
 * **Analysis mechanisms & automation**: 
   * interactive (with tactics, programmable in SML or using the Eisbach language)
   * Sledgehammer tool for automated proof generation using different backend
     solvers (e.g., Z3), Nitpick tool for counter-example search
+* **UX (UI, tooling, libraries)**:
+  * IDEs for jEdit and VSCode (less functional than jEdit), with code completion/navigation on-par with most mainstream programming languages
+  * CLI tools for building theories, supporting caching and parallel proof checking
+* **Scalability**: supports parallel proof checking (i.e., runs multi-core), also parallel proof search with multiple SMT solvers
+* **Stability**: Detailed [changelogs](https://isabelle.in.tum.de/dist/Isabelle2021/doc/NEWS.html) for backwards-incompatible changes. Proofs will often break with new versions, less problematic if the structured proof language (Isar)  is used.
+* **Documentation and learning resources**:
+  * Bundled [tutorials and reference documentation](https://isabelle.in.tum.de/documentation.html)
+  * Books freely available (e.g., [this](http://concrete-semantics.org/))
+* **Support**: 
+  * An active [mailing list](https://lists.cam.ac.uk/pipermail/cl-isabelle-users/), Stackoverflow (tag: isabelle)
 * **Success stories**: 
-  * [seL4 microkernel verification][5] (~10 kLoC of C code), verified information
+  * [seL4 microkernel verification][5]: ~10 kLoC of C code), verified information
     flow and other properties down to the binary code, initial formalization
-    effort estimated at 30 person-years with 200 kLoC of proofs)
-  * CoCon, a secure (against an information flow policy with declassification)
+    effort estimated at 20 person-years with 200 kLoC of proofs, i.e., 20:1 ratio
+  * [CoCon](https://link.springer.com/article/10.1007/s10817-020-09566-9), a secure (against an information flow policy with declassification)
     scientific conference management system used for ITP 2016, code generated
     from a verified development
-* **UX (UI, documentation, community, tooling)**:
-  * IDEs for jEdit and VSCode (less functional than jEdit), with code completion/navigation on-par with most mainstream programming languages
-  * Tutorials and books freely available
-  * CLI tools for building theories, supporting caching and parallel proof checking
+* **Community**:
   * A large collection of existing developments: https://www.isa-afp.org/ 
-  * An active mailing list, Stackoverflow
 * **Related tools and comparison**: 
   * Other provers: Coq, HOL4, HOL Light
   * [An older comparison][2] (2006) to 16 other provers, math focused
   * A more recent (2019) [comparison to Coq][7] (math focused)
 * **Limitations**:
+* **Future prospects**:
 * **More details**: supports code generation into OCaml, Haskell SML, and Scala.
   The structured proof language Isar makes maintenance of proofs easier compared
   to proofs based on just a sequence of tactic applications.
@@ -224,112 +318,147 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Framework for programming language semantics and analysis
 * **URL**: https://kframework.org/
+* **License**:
 * **Modeling language**: a term-rewriting system
 * **Domain**: programming language semantics
 * **Abstraction level of models**:
 * **Analysis mechanisms & automation**:
   * Automatically defines interpreters for a specified language
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**: semantics for C, Java 1.4, EVM
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## Lean Prover
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://leanprover.github.io/
+* **License**: Apache 2.0
 * **Modeling language**: dependently-typed lambda calculus
 * **Domain**: general
-* **Abstraction level of models**:
+* **Abstraction level of models**: any
+* **Supported languages**:
 * **Analysis mechanisms & automation**: interactive, with strong emphasis on programmable tactics backed by Z3
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## Move prover
 
 * **Short description**: Verifier for smart contracts
 * **URL**: https://research.fb.com/publications/the-move-prover/
+* **License**:
 * **Modeling language**:
 * **Domain**: smart contracts for the Libra blockchain
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**: 
    * automation?
    * bytecode verifier that does semantics checks on the bytecode, uses boogie and Z3 in background
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
+* **More details**:
 
 ## ProVerif
 
 * **Short description**: Security protocol verifier
 * **URL**: https://prosecco.gforge.inria.fr/personal/bblanche/proverif/
+* **License**:
 * **Modeling language**: applied Pi calculus
 * **Domain**: security protocols in the symbolic (Dolev-Yao) model
 * **Abstraction level of models**: high-level protocol descriptions
+* **Supported languages**:
 * **Analysis mechanisms & automation**: 
    * protocols translated to Horn clauses with automated proof search
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
 * **Success stories**: models of the Signal protocol, TLS 1.3 draft, parts of the Belenios voting system
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**: Tamarin
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## PVS
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://pvs.csl.sri.com/
+* **License**:
 * **Modeling language**: dependently-typed lambda calculus
 * **Domain**: program analysis
 * **Abstraction level of models**: any
+* **Supported languages**:
 * **Analysis mechanisms & automation**: Interactive with automation. Has a plugin system and built in tools for automating proofs.
+* **UX (UI, tooling, libraries)**: Emacs mode, VS Code integration for more user-friendly interaction
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**: byzantine fault tolerance, used by NASA in flight control systems
-* **UX (UI, documentation, community, tooling)**: Emacs mode, VS Code integration for more user-friendly interaction
+* **Community**:
 * **Related tools and comparison**: Coq, Isabelle, Lean
 * **Limitations**:
   - It seems to require processes to terminate in order to model them.
   - Types need to be well-founded.
   - The type system language is distinct and more limited than the object language. This is due to its focus on program analysis,
     rather than mathematics.
-
-## ACL2
-
-* **Short description**: Interactive theorem prover
-* **URL**: https://www.cs.utexas.edu/users/moore/acl2/
-* **Modeling language**: Applicative subset of common lisp. Dynamically typed.
-* **Domain**: program analysis
-* **Abstraction level of models**: any
-* **Analysis mechanisms & automation**: https://www.cs.utexas.edu/users/moore/acl2/
-* **Success stories**: AMD microcode, used in microprocessor industry
-* **UX (UI, documentation, community, tooling)**: Emacs mode
-* **Related tools and comparison**: PVS
-* **Limitations**:
+* **Future prospects**:
+* **More details**:
 
 ## Tamarin
 
 * **Short description**: Security protocol verifier
 * **URL**: http://tamarin-prover.github.io/
+* **License**:
 * **Modeling language**: Rewrite rules to model the protocol, equational
   theories for specifying cryptographic primitives, trace-based execution and
   FOL to express properties
 * **Domain**: security protocols in the symbolic (Dolev-Yao) model
 * **Abstraction level of models**: Protocol logic
+* **Supported languages**: N/A
 * **Analysis mechanisms & automation**: 
    * a built-in Dolev-Yao adversary model
    * automated proof search with 
    * interactive proof search also supported
-* **Success stories**: TLS 1.3 and Signal protocols
-* **UX (UI, documentation, community, tooling)**:
+* **UX (UI, tooling, libraries)**:
   * a Web-based interface for proof search/construction
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
   * a manual is available
+* **Support**:
+* **Success stories**: TLS 1.3 and Signal protocols
+* **Community**:
 * **Related tools and comparison**:
   * ProVerif:
   * Scyther: Tamarin is more expressive. 
 * **Limitations**: No support for arithmetic 
+* **Future prospects**:
 * **More details**: Support for observational-equivalence properties (e.g., privacy).
 
 
@@ -337,48 +466,74 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Analyzer of high-level models
 * **URL**: https://lamport.azurewebsites.net/tla/tla.html
+* **License**: BSD
 * **Modeling language**: First-order logic to define transition systems, LTL formulas to specify properties
 * **Domain**: general (state machines)
 * **Abstraction level of models**: high-level designs
+* **Supported languages**: N/A
 * **Analysis mechanisms & automation**: 
    * finite state model checker for restricted-size domains
    - TLA proof system for interactive proofs; proofs can also be done in Isabelle/HOL
+* **UX (UI, tooling, libraries)**:
+  * there's a Java-based IDE that feels somewhat dated, and also a VSCode plugin is available (albeit with less functionality)
+* **Scalability**: the model checker can run on multiple machines in parallel,  with built-in support for Azure and EC2 on AWS
+* **Stability**:
+  * Backwards incompatibilities seem rare
+  * Detailed [Changelogs]()https://github.com/tlaplus/tlaplus/releases)
+* **Documentation and learning resources**:
+  * a free [book](https://lamport.azurewebsites.net/tla/book.html) is available, a [tutorial website](https://learntla.com/introduction/), and also a [video course)(https://lamport.azurewebsites.net/video/videos.html)
+* **Support**:
 * **Success stories**: 
    * the Paxos consensus protocol and its many variations
    * Amazon used it to check designs of their protocol
-* **UX (UI, documentation, community, tooling)**:
-  * there's a Java-based IDE that feels somewhat dated, and also a VSCode plugin is available (albeit with less functionality)
-  * a free book is available, also a video course
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## Viper
 
 * **Short description**:
 * **URL**: https://www.pm.inf.ethz.ch/research/viper.html
+* **License**:
 * **Modeling language**:
 * **Domain**:
 * **Abstraction level of models**:
+* **Supported languages**:
 * **Analysis mechanisms & automation**: 
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
 * **Success stories**:
-* **UX (UI, documentation, community, tooling)**:
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**:
 
 ## Z3 and new-Z/max-Z
 
 * **Short description**: SMT solver
 * **URL**: https://lamport.azurewebsites.net/tla/tla.html
+* **License**: MIT
 * **Modeling language**: SMT with a number of theories (arithmetic, bit-vector, arrays)
 * **Domain**: SMT formulas
-* **Abstraction level of models**:
+* **Abstraction level of models**: SMT formulas
+* **Supported languages**: N/A
 * **Analysis mechanisms & automation**: automated model finding
-* **Success stories**: 
 * **UX (UI, documentation, community, tooling)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
+* **Success stories**: 
+* **Community**:
 * **Related tools and comparison**:
 * **Limitations**:
+* **Future prospects**:
 * **More details**: used as a background solver for many other tools
 
 ## References
@@ -404,7 +559,7 @@ Also, we collect here other resources that compare different tools:
 * **Abstraction level of models**:
 * **Supported languages**:
 * **Analysis mechanisms & automation**: 
-* **UX (UI, documentation, community, tooling)**:
+* **UX (UI, tooling, libraries)**:
 * **Scalability**:
 * **Stability**:
 * **Documentation and learning resources**:
