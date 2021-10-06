@@ -443,17 +443,26 @@ Also, we collect here other resources that compare different tools:
 * **Supported languages**: N/A
 * **Analysis mechanisms & automation**: 
    * a built-in Dolev-Yao adversary model
-   * automated proof search with 
+   * automated proof search (support to modify the search strategies by scripts called "oracles") 
    * interactive proof search also supported
 * **UX (UI, tooling, libraries)**:
   * a Web-based interface for proof search/construction
 * **Scalability**:
+  * can be run on multiple cores to speed up the proves, but often using more than 12-14 cores does not provide additional improvement
+  * can also use up a lot of memory for complicated proofs, so using a larger machine with more memory can help 
 * **Stability**:
+  * think there have been changes where it was not clear whether all proofs still go through (with the same stragegies), but I have never experienced incompatibility of old proofs   
 * **Documentation and learning resources**:
-  * a manual is available
+  * a manual is available here: https://tamarin-prover.github.io/manual/book/001_introduction.html 
+  * tutorials are available here: https://github.com/tamarin-prover/teaching
+  * research papers, links to the above, etc can all be found here: https://tamarin-prover.github.io/
 * **Support**:
+  * I think the tool is still regularly updated / improved
+  * if one has a problem it is probably best to write to the maintainers listed here: https://tamarin-prover.github.io/  
 * **Success stories**: TLS 1.3 and Signal protocols
 * **Community**:
+  * developments of the tool as well as applications of the tool to protocols are regularly features in security conferences (e.g., CSF,...)
+  * different research groups seem to regularly use the tool (CISPA, ETH Zurich, Loria/Inria) 
 * **Related tools and comparison**:
   * ProVerif:
   * Scyther: Tamarin is more expressive. 
