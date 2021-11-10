@@ -481,8 +481,9 @@ Also, we collect here other resources that compare different tools:
 * **Abstraction level of models**: high-level designs
 * **Supported languages**: N/A
 * **Analysis mechanisms & automation**: 
-   * finite state model checker for restricted-size domains
-   - TLA proof system for interactive proofs; proofs can also be done in Isabelle/HOL
+   * TLC, a finite explicit state model checker for restricted-size domains
+   * Apalache, a bounded model checker based on SMT
+   * TLA proof system (TLAPS) for interactive proofs; proofs can also be done in Isabelle/HOL
 * **UX (UI, tooling, libraries)**:
   * there's a Java-based IDE that feels somewhat dated, and also a VSCode plugin is available (albeit with less functionality)
 * **Scalability**: the model checker can run on multiple machines in parallel,  with built-in support for Azure and EC2 on AWS
