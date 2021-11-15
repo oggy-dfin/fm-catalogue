@@ -504,25 +504,34 @@ Also, we collect here other resources that compare different tools:
 
 ## Viper
 
-* **Short description**:
+* **Short description**: (V)erification (I)nfrastructure for (Pe)rmission-based (R)easoning
 * **URL**: https://www.pm.inf.ethz.ch/research/viper.html
-* **License**:
-* **Modeling language**:
-* **Domain**:
-* **Abstraction level of models**:
-* **Supported languages**:
-* **Analysis mechanisms & automation**: 
-* **UX (UI, tooling, libraries)**:
-* **Scalability**:
-* **Stability**:
-* **Documentation and learning resources**:
-* **Support**:
-* **Success stories**:
-* **Community**:
-* **Related tools and comparison**:
-* **Limitations**:
-* **Future prospects**:
-* **More details**:
+* **License**: Mozilla Public License 2.0
+* **Modeling language**: The Viper intermediate language contains implementation and specification primitives. 
+    * The implementation language is suitable for modeling potentially concurrent, stateful systems, e.g., statically typed, object-oriented programs. 
+    * The specification language is Separation Logic with abstract predicates, state-dependent functions, iterated separating conjunction, magic wands, fractional permissions, state introspection. 
+    * Built-in uninterpreted (partially axiomatized) types include Sets, Sequences, Multisets, and Maps. User-defined uninterpreted types and functions can be modeled in first-order logic. 
+* **Domain**: Automated modular verification of potentially concurrent, stateful systems described in a statically typed, object-oriented language (e.g. Java). 
+* **Abstraction level of models**: SMT-generated counterexample models to verification failures can be lifted to the level of Viper. There exists an [experimental debugger support](https://github.com/viperproject/lizard) for automatically visualizing heap configurations based on counterexample models. 
+* **Supported languages**: Concurrent Java, OpenCL, C/OpenMI (via VerCors) Go (via Gobra); safe Rust (via Prusti); Python 3, statically typed using MyPy (via Nagini), the Vyper smart contract language (via 2vyper)
+* **Analysis mechanisms & automation**: automated verification via the Z3 SMT solver. 
+* **UX (UI, tooling, libraries)**: Viper IDE (based on VS Code) integrates all Viper-related tools.
+* **Scalability**: yes, due to procedure-modular reasoning
+* **Stability**: A fairly stable/ mature JVM-based project 
+* **Documentation and learning resources**: http://viper.ethz.ch/tutorial/
+* **Support**: https://stackoverflow.com/questions/tagged/viper-lang
+* **Success stories**: Viper's frontend verifiers are used in production (e.g., [VerCors](https://vercors.ewi.utwente.nl/wiki#introduction), [VerifiedSCION](https://www.pm.inf.ethz.ch/research/verifiedscion.html)) as well as research (e.g., [Etherium smart contracts](https://www.pm.inf.ethz.ch/research/2vyper.html), [Prusti](https://www.pm.inf.ethz.ch/research/prusti.html)). Viper itself has been successfully used in [verification competitions](https://www.pm.inf.ethz.ch/research/verifythis.html) and teaching formal methods. 
+* **Community**: 
+    * The development of the core Viper project is between ETH Zurich and UBC. 
+    * Active projects include [VerCors](https://vercors.ewi.utwente.nl/), [Nagini](https://www.pm.inf.ethz.ch/research/nagini.html), [Prusti](https://www.pm.inf.ethz.ch/research/prusti.html), [2vyper](https://www.pm.inf.ethz.ch/research/2vyper.html), [Gobra](https://www.pm.inf.ethz.ch/research/gobra.html)
+* **Related tools and comparison**: 
+    * Dafny: also modular language with implementation+specification ingrediants for heap-trasforming programs; does not support concurrency/ Separation Logic but can be compiled and run; supports only verification condition generation
+    * VeriFast: also based on Separation Logic; heavily relies on user-defined lemmas; no automation for ISC; typically, more predictable verification times than in Viper; supports only symbolic execution
+    * Boogie: only basic verification features (~first-order logic); used to encode more sophisticated techniques (including Viper and Dafny)
+    * F*: arguably, Viper's functional alter-ego. More powerful type system than in Viper; limited support for heap verification and modeling stateful systems. 
+* **Limitations**: Sometimes the SMT solver is a bottleneck. Verification performance debugging requires domain expertise in hard cases. 
+* **Future prospects**: 
+* **More details**: 
 
 ## Z3 and new-Z/max-Z
 
