@@ -59,21 +59,27 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://www.cs.utexas.edu/users/moore/acl2/
-* **License**:
-* **Modeling language**: Applicative subset of common lisp. Dynamically typed.
+* **License**: MIT-like
+* **Modeling language**: First-order, computational, applicative subset of
+  common lisp. Dynamically typed.
 * **Domain**: program analysis
-* **Abstraction level of models**: any
+* **Abstraction level of models**:
 * **Supported languages**:
 * **Analysis mechanisms & automation**: https://www.cs.utexas.edu/users/moore/acl2/
 * **UX (UI, tooling, libraries)**: Emacs mode
-* **Scalability**:
-* **Stability**:
-* **Documentation and learning resources**:
-* **Support**:
+* **Scalability**: As proof structures grow larger and more complex, typically
+  needs guiding "hints" to get proofs through in a reasonable length of time.
+* **Stability**: Very stable, project releases are infrequent.
+* **Documentation and learning resources**: An extensive online manual exists
+  at
+  https://www.cs.utexas.edu/users/moore/acl2/current/combined-manual/index.html.
+* **Support**: Mailing list.
 * **Success stories**: AMD microcode, used in microprocessor industry
 * **Community**:
 * **Related tools and comparison**: PVS
-* **Limitations**:
+* **Limitations**: Problems must be expressible in first-order logic, without
+  dependent types, and all terms must be computable. Note that relations can
+  be used, since a theorem can simply be a series of computable asserts.
 * **Future prospects**:
 * **More details**:
 
@@ -81,22 +87,38 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Dependently typed programming language
 * **URL**: https://wiki.portal.chalmers.se/agda/pmwiki.php
-* **License**:
-* **Modeling language**: dependently-typed lambda calculus 
-* **Domain**: general, geared towards verified functional programs.
-* **Abstraction level of models**:
-* **Supported languages**:
-* **Analysis mechanisms & automation**: 
-* **UX (UI, tooling, libraries)**:
-* **Scalability**:
-* **Stability**:
-* **Documentation and learning resources**:
-* **Support**:
+* **License**: BSD-like
+* **Modeling language**: Dependently-typed lambda calculus with or without
+  Axiom K. Also optionally supports cubical type theory, though without an
+  accompanying standard library.
+* **Domain**: General, geared towards verified functional programs. Makes it
+  relatively convenient to write "proof-carrying code" using dependent type
+  indices, so that algoritms are correct-by-construction.
+* **Abstraction level of models**: Support any level of abstraction.
+* **Supported languages**: Integrates with Haskell.
+* **Analysis mechanisms & automation**: Has very limited support for proof
+  refinements, though support here is growing. Emacs mode allows for easy
+  exploration of available theorems and terms, sometimes making proof
+  construction somewhat magical. Does not offer extensive proof term search,
+  however, only what is obvious from the environment.
+* **UX (UI, tooling, libraries)**: Relies heavily on the Emacs mode for its
+  UX.
+* **Scalability**: Scales relatively well by having good support for modules.
+* **Stability**: Very stable, releases are infrequent.
+* **Documentation and learning resources**: Weaker than other dependently
+  typed languages but growing. There is now PLFA, Programming Language
+  Foundation in Agda, to help with learning the language and its approach to
+  proof term construction.
+* **Support**: Zulip, GitHub.
 * **Success stories**:
-* **Community**:
-* **Related tools and comparison**:
-* **Limitations**:
-* **Future prospects**:
+* **Community**: Has a relatively strong but small community.
+* **Related tools and comparison**: Similar in some ways to Coq, Lean and
+  Idris. More "proofs as programs" focused than the others.
+* **Limitations**: No severe limitations over similar such provers. "Fixing
+  proofs" after code refactoring remains a difficult problem for all provers
+  in this category.
+* **Future prospects**: Gaining better support for HoTT, which could make
+  setoid reasoning more natural.
 * **More details**:
 
 ## Alloy
@@ -130,29 +152,41 @@ Also, we collect here other resources that compare different tools:
 
 * **Short description**: Interactive theorem prover
 * **URL**: https://coq.inria.fr/
-* **License**:
-* **Modeling language**: dependently-typed lambda calculus
-* **Domain**: general
-* **Abstraction level of models**: any
-* **Supported languages**:
+* **License**: LGPL 2.1
+* **Modeling language**: Dependently-typed lambda calculus.
+* **Domain**: General.
+* **Abstraction level of models**: Any.
+* **Supported languages**: OCaml, Haskell, Scheme.
 * **Analysis mechanisms & automation**: 
-    * interactive theorem proving with user-definable tactics (Ltac language to define tactics)
-    * QuickCheck for finding counterexamples
+    * Interactive theorem proving with user-definable tactics (Ltac language to define tactics).
+    * QuickChick for finding counterexamples.
 * **UX (UI, tooling, libraries)**:
     * Built-in IDE, and also integrations for VSCode, Emacs, and Vim
-* **Scalability**:
-* **Stability**:
+* **Scalability**: Has an excellent module system, so scales well through modularity.
+* **Stability**: Relatively stable; releases are regular (several point
+  releases each year), but sometimes break earlier proof developments,
+  depending on how heavily one makes use of automated capabilities.
 * **Documentation and learning resources**:
-    * Several free books & courses available 
+    * Several free books & courses available
+    * Excellent multi-part Software Foundations course for new learners
 * **Support**:
+    * Coq has an active bug tracker on GitHub, team is quite responsive.
 * **Success stories**: 
   * CompCert, a formally verified optimizing C compiler (~100k lines of Coq code)
   * CertiKOS, a concurrent microkernel/hypervisor (~6500 lines of C and x86
     assembly)
-  * FSCQ, a simple FUSE file system verified to be safe in the presence of crashes (~30k lines of Coq, extracted Haskell code)
+  * FSCQ, a simple FUSE file system verified to be safe in the presence of
+    crashes (~30k lines of Coq, extracted Haskell code)
+  * Fiat, Bedrock, Kami, a complete system developed by MIT for correct
+    construction of hardware and software platforms.
 * **Community**:
-* **Related tools and comparison**: Isabelle, Agda, Idris
-* **Limitations**:
+    * Zulip gives access to all the primary developers
+    * IRC, mailing list, GitHub
+* **Related tools and comparison**: Isabelle, Agda, Idris, Lean
+* **Limitations**: Not very good at dependently-typed programming, definitely
+  focused on interactive proof construction using tactics. Thus, it is more
+  common to use data with associated proofs, than dependently-typed data that
+  is proof-carrying.
 * **Future prospects**:
 * **More details**: supports code extraction to OCaml, Haskell and Scheme. Likely the best-known theorem prover.
 
