@@ -162,7 +162,7 @@ Also, we collect here other resources that compare different tools:
     * QuickChick for finding counterexamples.
 * **UX (UI, tooling, libraries)**:
     * Built-in IDE, and also integrations for VSCode, Emacs, and Vim
-* **Scalability**: Has an excellent module system, so scales well through modularity.
+* **Scalability**: Has an excellent module system, so scales well through modularity. There is a Coq-IDE support for resolving goals in parallel, but not in the coqc - it's currently mainly a single core environment.
 * **Stability**: Relatively stable; releases are regular (several point
   releases each year), but sometimes break earlier proof developments,
   depending on how heavily one makes use of automated capabilities.
