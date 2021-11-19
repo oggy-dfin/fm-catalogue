@@ -438,6 +438,37 @@ Also, we collect here other resources that compare different tools:
 * **Future prospects**:
 * **More details**:
 
+## Prusti
+
+* **Short description**: Prusti is a prototype verifier for Rust, built upon the Viper verification infrastructure. Prusti aims to reuse as much information as possible from the type system to reduce the annotation effort required from the user. Many other tools start from LLVM IR and they don't get information from the Rust type system.
+* **URL**: http://prusti.org/
+* **License**: Mozilla Public License Version 2.0
+* **Modeling language**: Prusti supports first-order logic. The specifications can be written in a pure (i.e. deterministic, side-effect free, non-diverging) subset of Rust (including Rust functions marked as pure), plus some Rust-like syntax to express implications and quantifiers.
+* **Domain**: Prusti is a general purpose verifier for Rust that allows proving functional correctness and absence of panics (e.g. absence of integer overflows).
+* **Abstraction level of models**: Code-level verification against code-level contracts. The specification syntax builds on top of Rust syntax, adding operators such as ```==>``` or ```forall```.
+* **Supported languages**: Prusti covers a large subset of safe Rust. There are still fragments of Rust which Prusti does not support. Unsafe Rust (which removes some of the memory safety guarantees) is a prime example that the Prusti developers are currently working on.
+* **Analysis mechanisms & automation**: Prusti is an automated deductive verifier (like e.g. Dafny) that automatically extracts the necessary information from the Rust compiler and builds a Viper program, which is then verified by the Viper verification infrastructure. Viper uses the SMT solver Z3 under the hood.
+* **UX (UI, tooling, libraries)**: Apart from the VS Code IDE extension [Prusti Assistant](https://marketplace.visualstudio.com/items?itemName=viper-admin.prusti-assistant), Prusti integrates with Rust's package manager (```cargo prusti```) to support the standard Rust developer experience. As a result, the Prusti UX feels very similar to the Rust UX, for example: verification errors are reported just like compilation errors.
+* **Scalability**: The verification is modular in that every method is checked independently from the others. The bottleneck is usually the Viper verification, which already uses all available cores. The developers report no benefit in further parallelizing the tool in it's current implementation.
+* **Stability**: Prusti is still a prototype and, therefore, stability guarantees are limited. The best way to be sure that a proof keeps working is to add it to the (extensive) test suite. 
+* **Documentation and learning resources**: 
+    * http://prusti.org/
+    * https://viperproject.github.io/prusti-dev/
+    * https://www.youtube.com/watch?v=C9TTioH5JUg
+* **Support**: These channels are used by the team for regular communication:
+    * https://github.com/viperproject/prusti-dev/issues
+    * https://prusti.zulipchat.com/login/
+* **Success stories**:
+    * Prusti successfully executes on >60 of the most used Rust crates (packages).
+* **Community**: Prusti has been used in various research projects. 
+* **Related tools and comparison**: A nice survey is presented at https://alastairreid.github.io/automatic-rust-verification-tools-2021/
+    * Creusot (built on top of Why3) is another automated verifier in development. 
+    * RustBelt is a Coq-based alternative. 
+* **Limitations**: Unsupported language features is the main practical limitation. 
+* **Future prospects**: Support for unsafe code, closures, type invariants, interior mutability, concurrency, refinement, dependent types.
+* **More details**: 
+
+
 ## PVS
 
 * **Short description**: Interactive theorem prover
