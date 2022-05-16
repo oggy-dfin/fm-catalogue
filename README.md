@@ -190,6 +190,33 @@ Also, we collect here other resources that compare different tools:
 * **Future prospects**:
 * **More details**: supports code extraction to OCaml, Haskell and Scheme. Likely the best-known theorem prover.
 
+
+## Creusot
+
+* **Short description**: A deductive verifier for Rust code based on Why3
+* **URL**: https://github.com/xldenis/creusot
+* **License**: LGPL
+* **Modeling language**: Rust for the model, Pearlite for specifications. Pearlite consists of the pure subset of Rust, together with quantifiers and special operators for mutable borrows.
+* **Domain**: Verification of safe Rust code
+* **Abstraction level of models**: Code
+* **Supported languages**: Rust
+* **Analysis mechanisms & automation**: The key trick is the representation of mutable borrows, based on the prophecy variables of RustHorn, which avoids using separation logic. This simplifies the reasoning and the proof obligations, but limits the applicability. The verification is otherwise based on annotations and a weakest pre-condition calculus. The resulting proof obligations are then translated to Why3 (the MLCFG language), and can be discharged using any of the Why3 backends. This includes SMT solvers but also interactive theorem provers (Isabelle).
+* **UX (UI, tooling, libraries)**:
+* **Scalability**: Multiple backend solvers can (and usually are) run in parallel. It's unclear if there is any parallelism beyond that.
+* **Stability**: Progress over stability is currently an explicit tenant of the tool.
+* **Documentation and learning resources**:
+* **Support**:
+* **Success stories**:
+* **Community**:
+* **Related tools and comparison**:
+    - Prusti is a deductive verifier for Rust based on separation logic.
+    - Verus is a deductive verifier also focused on the safe subset of Rust
+    - Stainless-Rust is a deductive verifier for the safe subset of Rust, focused on issuing decidable SMT queries
+* **Limitations**: No support for unsafe subset of Rust or the "interior mutability" Rust pattern.
+* **Future prospects**:
+* **More details**:
+
+
 ## CryptoVerif
 
 * **Short description**: Cryptographic protocol analyzer
