@@ -594,6 +594,31 @@ Also, we collect here other resources that compare different tools:
 * **Future prospects**:
 * **More details**:
 
+
+## Verus
+
+* **Short description**: A deductive verifier for a subset of Rust
+* **URL**: rhttps://github.com/secure-foundations/verus
+* **License**: MIT
+* **Modeling language**: Rust for the code. Rust extended with quantifiers etc for specifications and proofs (lemmas).
+* **Domain**: Verification of a subset of Rust, limited to safe Rust.
+* **Abstraction level of models**: Code
+* **Supported languages**: Rust
+* **Analysis mechanisms & automation**: As they focus on the safe subset of Rust (also without interior mutability), they can treat Rust functions as pure functions. This allows an efficient encoding into SMT solvers. They use Z3 as the backend.
+* **UX (UI, tooling, libraries)**: 
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
+* **Success stories**:
+* **Community**:
+* **Related tools and comparison**:
+  - Creusot and Stainless-Rust target similar subsets of Rust
+  - Prusti is a deductive verifier for Rust.
+* **Limitations**: Verus doesn't integrate with off-the-shelf Rust compilers; it uses a modified toolchain. No support for unsafe Rust or interior mutability
+* **Future prospects**:
+* **More details**:
+
 ## Viper
 
 * **Short description**: (V)erification (I)nfrastructure for (Pe)rmission-based (R)easoning
