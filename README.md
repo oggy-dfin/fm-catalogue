@@ -522,6 +522,31 @@ Also, we collect here other resources that compare different tools:
 * **Future prospects**:
 * **More details**:
 
+
+## Stainless-Rust
+
+* **Short description**: A deductive verifier for Rust code based on Stainless
+* **URL**: https://github.com/epfl-lara/rust-stainless
+* **License**: Apache
+* **Modeling language**: Rust with additional annotations for pre/post conditions and termination measures (variants).
+* **Domain**: Rust code verification
+* **Abstraction level of models**: Code
+* **Supported languages**: Rust
+* **Analysis mechanisms & automation**: Supports a subset of Rust (pure, no interior mutability). Programs are translated to the intermediate language of the Stainless framework, and then discharged by SMT solvers.
+* **UX (UI, tooling, libraries)**:
+* **Scalability**:
+* **Stability**:
+* **Documentation and learning resources**:
+* **Support**:
+* **Success stories**:
+* **Community**:
+* **Related tools and comparison**:
+  - Prusti, Creusot, Verus
+* **Limitations**: No support for unsafe Rust or interior mutability.
+* **Future prospects**:
+* **More details**:
+
+
 ## Tamarin
 
 * **Short description**: Security protocol verifier
